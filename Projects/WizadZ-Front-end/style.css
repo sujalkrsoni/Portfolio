@@ -1,0 +1,721 @@
+@font-face {
+    font-family: sujal;
+    src: url(NeueMachina-Regular.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+/* ---------------------------------------------------------- section 1 home page  ------------------------------ ----------------- */
+
+.sec1{
+    /* background-color: lightblue; */
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+/*  -------------- navigation ( left ) ----------- */
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px 20px 50px;
+    font-size:20px ;
+    font-family: sujal;
+    position: relative;
+}
+nav h1 i {
+    rotate: 45deg;
+    display: inline-block;
+    font-size: 50px;
+    position: relative;
+    top: 4px;
+    margin-right: 2px;
+    margin-left: 50px;
+}
+nav h1{
+    position: relative;
+    top: -14px;
+    font-weight: bolder; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+
+/*  -------------- navigation ( Right ) ----------- */
+
+.right{
+    display: flex;
+    margin-right: 50px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.right h4{
+    margin-right: 50px;
+}
+.right button{
+    background-color: transparent;
+    border-radius: 7px;
+    width: 220px;
+    height: 60px;
+    border: solid 1.7px black;
+    font-weight: 600;
+    font-family: sujal;
+    letter-spacing: 1px;
+    position: relative;
+    top: -15px;
+    font-size: 18px;
+    word-spacing: 7px;
+}
+nav i{
+    display: none;
+
+}
+
+
+/*------------------------------ Main section ( home page )  -----------------------------------*/
+.center{
+    width: 100%;
+    height: 90%;
+    display: flex;
+
+}
+.cen-p1{
+    height: 100%;
+    width: 100%;
+    margin-left: 50px;
+}
+.cen-p1 h4{
+    font-family: sujal;
+    font-size: 58px;
+    margin: 0px 70px 40px 50px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.cen-p1 p {
+    font-family: sujal;
+    margin: 10px 140px 20px 50px;
+    font-size: 22px;
+}
+.cen-p1 button{
+    width: 300px;
+    height: 65px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 22px;
+    margin: 20px 70px 40px 50px;
+    word-spacing: 10px;
+    font-family: sujal;
+    
+}
+.cen-p2{
+    height: 100%;
+    width: 100%;
+    /* margin-top: 50px; */
+}
+
+
+/* ---------------- Bottom of section 1 ( company logos ) ----------- */
+.sec1-bottom{
+    height: 160px;
+    display:flex;
+    justify-content: space-evenly;
+    margin: 100px 50px 0px 50px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 40px;
+}
+.sec1-bottom img{
+    width: 150px ;
+    height: 60px;
+    /* position: relative; */
+    left: -10px;
+    overflow: hidden;
+}
+.sec1-bottom  :nth-child(1){
+    /* position: relative; */
+    top: 17px;
+    height: 50px;
+}
+.sec1-bottom  :nth-child(3),.sec1-bottom  :nth-child(4),.sec1-bottom  :nth-child(5){
+    height: 70px;
+    width: 180px;
+}
+.sec1-bottom :nth-child(2),.sec1-bottom :nth-child(6){
+    height: 50px;
+    width: 130px;
+}
+
+
+/* ---------------------------------------------- section 2 services ----------------------------------------------------- */
+
+.services{
+    display: flex;
+    margin-left: 100px;
+    font-family: sujal;
+    padding-bottom: 50px;
+    position: relative;
+}
+.services h1{
+    width: 200px;
+    height: 60px;
+    font-size: 30px;
+    background-color: #B9FF66;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    margin-right: 30px;
+    font-size: 40px;
+    padding: 2px;
+}
+.services p {
+    position: relative;
+    top: 10px;
+    font-size: 18px;
+}
+
+
+.services-container{
+    display: flex;
+    margin: 0px 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+/* card  design  */
+.ser-cards{
+    flex-shrink: 0;
+    margin-top: 50px;
+    width: 630px;
+    height: 330px;
+    border: 1px solid #eee;
+    border-radius: 50px;
+    box-shadow: 0 10px 0 black;
+    background-color: rgb(255, 255, 255);
+    border: solid 2.5px black;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex : 1fr 1fr ;    
+}
+.ser-cards-left{
+    width: 315px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin: 50px 0 0 50px; */
+    margin: 50px 0 20px 50px;
+    font-family: sujal;
+    font-size: 21px;
+    position: relative;
+}
+
+/* heading text (search engine optimization ) */
+span p{
+    display: inline-block;
+    background-color: #B9FF66;
+    border-radius: 9px;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+/* arrow icon  */
+.ser-cards-left i{
+    background-color: black;
+    border-radius: 50%;
+    padding: 5px;
+    color: #B9FF66;
+    font-size: 35px;
+    position: relative;
+    margin-right: 8px;
+    top: 8px;
+    
+}
+
+/* learn more */
+.ser-cards-left #p{
+    position: relative;
+    top: -29px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.ser-cards-right{
+    width: 315px;
+    height: 100%;
+}
+.ser-cards-right img{
+    flex : 1fr;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* -----------------black color card design------------- */
+#ser-card2{
+    background-color: rgb(0, 0, 0);
+    height: 330px;
+    box-shadow: none;
+    color: white;
+}
+#ser-card2 p{
+    background-color: white;
+    color: black;
+    
+}
+#ser-card2 i{
+    background-color: white;
+    color: black;
+}
+#ser-card2 #p{
+    background-color: transparent;
+    color: white;
+}
+
+
+/* ------------------------------------------Section 3 ----------------------------------------------------- */
+.sec3-container{
+    width: 87%;
+    height: 380px;
+    background-color: #F3F3F3;
+    margin: 150px 0 0 100px;
+    border-radius: 60px;
+    display: flex;
+}
+.sec3-con-left{
+    width: 50%;
+    font-family: sujal;
+    font-size: 21px;
+    margin: 70px ;
+}
+.sec3-con-left p{
+    margin: 20px 0; 
+    font-size: 20px;
+}
+.sec3-con-left button{
+    width: 365px;
+    height: 75px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 22px;
+    margin-top: 10px;
+    word-spacing: 10px;
+    font-family: sujal;
+}
+.sec3-con-right{
+    width: 40%;
+    margin-left: 70px;
+    /* background-color: rebeccapurple; */
+}
+
+
+.sec4 {
+    height: 30vw;
+    margin: 150px 10px 40px 10px;
+}
+.sec4 .services h1{
+    width: 250px;
+    height: 55px;
+    text-align: center;
+    margin-right: 50px;
+}
+
+
+.case-study-container{
+    display: flex;
+    width: 87%;
+    height: 350px;
+    background-color: #111;
+    margin: 20px 0 0 100px;
+    border-radius: 60px; 
+    justify-content: space-around;
+    font-size: 18px;
+    font-family: sujal;
+    line-height: .7cm;
+    
+}
+.csc-sec1{
+    color: white;
+    padding-right: 70px;
+    border-right: 2px solid #eee;
+    margin: 70px 0 60px 40px;
+}
+.csc-sec2{
+    color: white;
+    padding-right: 70px;
+    border-right: 2px solid #eee;
+    margin: 70px 0 60px 0px;
+}
+.csc-sec3{
+    color: white;
+    margin: 70px 50px 60px 0px;  /* bottom margin reduce line if we pass more vale then line will be reduce if we pass low value then line will be long*/
+}
+#csc-learn-more{
+    color: #B9FF66;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width : 768px) {
+
+
+    /* ---------navigation media = */
+    nav{
+        background-color: rgb(255, 255, 255);
+        height: 12vw;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        padding: 1vw;
+        padding-right: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+    }
+    nav h1{
+        font-size: 5vw;
+        top: 0;
+    }
+    nav h1 i {
+        font-size: 5vw;
+        top: 0;
+        margin-left: 2vw;
+    }
+    nav h4,nav button{
+        display: none;
+    }
+    nav .right {
+        margin: 0;
+    }
+    nav .right i {
+        display: block;
+        font-size: 6vw;
+        margin-right: 5vw;
+    }
+
+
+
+    /* ------ center part ( section 1 )  -------- */
+
+    .center{
+        display: flex;
+        flex-direction: column;
+        font-size: 4vw;
+        padding-top: 19vw;
+    }
+    .cen-p1{
+        margin-left: 2vw;
+
+    }
+    .cen-p1 h4{
+        margin: 7.2vw 2vw 2.3vw 0vw ;
+        font-size: 9vw;
+        padding-top: 0vw;
+    }
+    .cen-p1 p {
+        margin: 0 8vw 2.3vw 1vw ;
+        font-size: 4vw;
+        padding-top: 0;
+    }
+    .cen-p1 button {
+        margin: 2vw 8vw 2vw 0;
+        font-size: 3vw;
+        padding-top: 0;
+        width: 40vw;
+        height: 10vw;
+        border-radius: 2vw;
+        word-spacing: 1vw;
+    }
+    .cen-p2{
+        margin: 6vw 1vw ;
+        
+    }
+    .cen-p2 img {
+        width: 90vw;
+        height: 60vw;
+    }
+
+    /* --------- section 1 bottom ---------- */
+
+    .sec1-bottom{
+        margin: 3vw 4vw ;
+        height:  30vw;
+
+    }
+    .sec1-bottom img{
+        width: 10vw ;
+        height: 5vw ;
+        margin-right: 3vw;
+    }
+    .sec1-bottom :nth-child(1){
+        position: relative; 
+        top: 2vh ; 
+        left: 1vw ;
+        margin-right: 3vw ;
+        width: 13vh ;
+        height: 7vw ;
+    }
+
+
+    /* ----------------------------section 2 services ----------------------------------- */
+
+    .sec2{
+        justify-content: center;
+        margin: 0 2vw;
+    }
+    .services{
+        margin : 2vw 0vw 0vw 0vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .services h1{
+        font-size: 5vw;
+        padding: 3vw 1vw 0 1vw ;
+        width: 40vw;
+        height: 7vw;
+        border-radius: 1.3vw;
+    }
+    .services p {
+        font-size: 4vw;
+    }
+    .services-container{
+        justify-content: center;
+    }
+    .ser-cards-left{
+        margin-top: 9vw;
+        margin-left: 5vw;
+        display: flex;
+        flex-direction: column;
+        row-gap: 12vw;
+    }
+    .services-container .ser-cards,.services-container #ser-card2{
+        border-radius: 7vw;
+        width: 90vw;
+        height: 50vw;
+        font-size: 3vw;
+    }
+
+    .services-container p {
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+    .services-container i {
+        font-size: 3.2vw;
+        position: relative;
+        top: 0vw;
+    }
+    .services-container #p {
+        font-size: 3.2vw;
+        margin-top: 3vw;
+    }
+    .services-container img{
+        width: 45vw;
+        height: 45vw;
+    }
+
+    .sec3-container{
+        justify-content: center;
+        width: 90vw;
+
+    }
+    .services-card-container{
+        justify-content: center;
+        width: 95vw;
+        margin: 0;
+    }
+    .ser-cards-left{
+        margin: 6.5vw 0 0 5vw;
+    }
+    .ser-cards-left p{
+        font-size: 4.2vw;
+    }
+
+
+
+
+    /* --------------------- section 3 -------------------- */
+
+    .sec3{
+        height: 100vw;
+    }
+
+    .sec3-container{
+        display: flex;
+        flex-direction: column;
+        width: 95vw;
+        height: 160vw;
+        font-size: 4vw;
+        margin: 30vw 2vw 2vw 2vw ;
+        align-items: center;
+        border-radius: 15vw;
+    }
+    .sec3-con-left{
+        height: 80vw;
+        width: 80vw;
+        margin-top: 13vw;
+        margin-bottom: 1vw;
+    }
+    .sec3-con-left h1{
+        font-size: 7vw;
+        margin-left: 0;
+    }
+    .sec3-con-left p{
+        font-size: 4vw;
+        margin-left: 0;
+        margin: 3vw 0;
+    }
+    .sec3-con-left button{
+        width: 70vw;
+        height: 15vw;
+        font-size: 4vw;
+        word-spacing: 1.5vw;
+    }
+    .sec3-con-right{
+        width: 80vw;
+        height: 80vw;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    .sec3-con-right img{
+        width: 85vw;
+        height: 80vw;
+        margin: 0;
+    }
+
+
+
+
+    /* ---------------------------section 4 ------------------ */
+
+
+    .sec4{
+        height: 165vw;
+        margin-top: 80vw;
+        margin-left: 2vw;
+    }
+    .sec4 .services{
+        display: flex;
+        flex-direction: column;
+        margin-left: 2vw;
+    }
+    .sec4 .services h1{
+        font-size: 5vw;
+        width: 40vw;
+        height: 9vw;
+        border-radius: 1.3vw;
+    }
+    .sec4 .services p {
+        font-size: 4vw;
+    }
+    .case-study-container {
+        display: flex;
+        flex-direction: column;
+        width: 95vw;
+        height: 130vw;
+        margin: 0;
+        border-radius: 15vw;
+        align-items: center;
+
+    }
+    .csc-sec1,.csc-sec2,.csc-sec3{
+        font-size: 4vw;
+        margin: 0;
+        padding: 0;
+        line-height: normal;
+        border-bottom: 2px solid white ;
+        border-right: none;
+        width: 70vw;
+        margin-left: 2vw;
+        text-align: center;
+        line-height: 5vw;
+    }
+     #csc-learn-more{
+        font-size: 4vw;
+        margin-top: 3vw;
+        margin-bottom: 2vw;
+    }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width : 400px) {
+    .sec1-bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0;
+        height: 25em;
+        gap: 1vw;    
+    }
+    .sec1-bottom #a ,.sec1-bottom #b {
+        width: 40vw;
+        height: 30vw;
+    }
+    .sec1-bottom :nth-child(1){
+        width: 7em;
+        height: 5em;
+        margin-bottom: 2.5vw;
+    }
+    
+    
+
+}

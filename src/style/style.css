@@ -1,0 +1,255 @@
+@font-face {
+    font-family: sujal;
+    src: url(./font/NeueMachina-Regular.otf);
+}
+*{
+    font-family: sujal;
+    margin: 0;
+    padding: 0;
+    color: white;
+    scroll-behavior: smooth;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    cursor: none;
+    background: black; 
+}  
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("../../public/images/noise.jpg") repeat;
+    opacity: 0.08; /* Adjust opacity for desired effect */
+    pointer-events: none; /* Ensure overlay doesn’t interfere with interactions */
+    z-index: -10;
+    background-size: cover;
+    /* filter: brightness(50%); */
+} 
+.overlay{
+    background-color: rgba(0, 0, 0, 0.415);
+    padding: 0;
+}
+a{
+    cursor: none;
+    text-decoration: none;
+    color: white;
+}
+  
+.cursor{
+    width: 35px;
+    height: 35px;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 50%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: all;
+}
+#cursor2{
+    width: 35px;
+    height: 35px;
+    border: 2px solid rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 50%;
+    z-index: 5;
+    opacity: 0;
+}
+
+.cursor, .tilted-div {
+    will-change: transform;
+}
+  
+html > *:not(:hover) .cursor{
+    display:none; /* DOnt show cursor when cursor is out of web page */
+}
+
+
+
+/* ----------- Header -------------- */
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: yellow;
+}
+
+/* ----------------------- sec 1 ------------------ */
+main{
+    padding-top: 100px;
+    height: 90vh;
+}
+.container {
+    perspective: 1500px; /* Controls the intensity of the 3D effect */
+    position: relative;
+}
+.sec1{
+    padding-left: 100px;
+}
+.tilted-div {
+    width: fit-content;
+}
+.home-left h2{
+    font-size: 70px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+.home-left button{
+    width: 300px;
+    height: 80px;
+    font-size: 25px;
+}
+.social-media{
+    top: 250px;
+    right: 30px;
+}
+.social-media a i{
+    color: white;
+    font-size: 30px;
+
+}
+
+
+
+/* ------------------ sec 2 ---------------- */
+.about-main{
+    margin: 0 170px 0 170px;
+}
+.about-me,.tech-stack,.learning-journey,.certificates,.approach{
+    padding-top: 170px;
+}
+.tech-stack , .learning-journey{
+    padding-bottom: 50px;
+}
+.tech-stack ul li{
+    font-size: 80px;
+    padding: 5px 2px;
+    width: 100%;
+}
+.tech-stack-line{
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid rgba(255, 255, 255, 0.207);
+}
+.learning-journey-description{
+    letter-spacing: 1px;
+}
+
+/*  For all item (li) */
+.certificate-item-div{
+    font-size: 55px;
+    overflow: hidden;
+}
+/* For right side  */
+.certificates ul li div p span{
+    border: 1px solid rgba(255, 255, 255, 0.207);
+    border-radius: 35px;
+    padding: 7px 10px;
+    letter-spacing: 1.3px;
+    font-size: 14px;
+}
+/* for right side item as well as only for 3,4 item */
+.certificates ul li:nth-child(3) div p,.certificates ul li:nth-child(4) div p{
+    margin-top: 20px;
+}
+/* for border-bottom  */
+.certificates-line{
+    border-top: 1px solid rgba(255, 255, 255, 0.207);
+}
+
+.certificate-item{
+    position: relative;
+    padding: 25px 0;
+}
+.certificates img{
+    position: absolute;
+    width: 400px;
+    display: none;
+    height: 250px;
+    z-index: 3;
+}
+.approach{
+    height: 100vh;
+}
+.approach-dialogue{
+    font-size: 6.04vw;
+    line-height: 100px;
+    font-weight: bolder;
+}
+
+
+
+/* --------------------- sec 3 -------------------- */
+
+.sec3{
+    margin-top: 150px;
+    padding-top: 20px;
+    height: 3000px;
+}
+.project-main{
+    position: relative;
+    
+}
+
+.project-container{
+    margin-top: 80px;  
+    position: absolute; 
+    left: 10%;
+}
+.projects{
+    transform: rotate(-8deg) translate(12%);
+}
+.projects img{
+    opacity: 0.2;
+    scale: 0.95;
+    width: 60vw;
+    height: 38vw;
+    border-radius: 30px;
+}
+
+/* -------------------- sec 4 ---------------  */
+.sec4{
+    margin: 0 190px;
+}
+.lets-talk{
+    font-size: 100px;
+    font-weight: bold;
+}
+footer div{
+    border-top: 1px solid rgba(255, 255, 255, 0.207);
+    padding-top: 50px;
+    margin-top: 80px;
+    padding-bottom: 100px;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* For Responsive */
+@media screen and (orientation:portrait){
+    .navbar-brand{
+        margin-top: 0;
+        padding-top: 0;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-row: 1fr 1fr;
+        background-color: blue;
+    }
+}
+
