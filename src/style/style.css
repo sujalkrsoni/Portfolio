@@ -113,7 +113,6 @@ main{
 .social-media a i{
     color: white;
     font-size: 30px;
-
 }
 
 
@@ -240,16 +239,101 @@ footer div{
 
 
 /* For Responsive */
-@media screen and (orientation:portrait){
+@media( max-width: 426px){
+    .cursor{
+        display: none !important;
+    }
     .navbar-brand{
-        margin-top: 0;
-        padding-top: 0;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 4rem !important;
+        height: 6rem !important;
+    }
+    #menu{
+        color: white !important;
+    }
+    .sec1,.home-left,.tilted-div{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .sec1{
+        font-size: 1rem;
+        padding: 0;
     }
     main{
-        display: grid;
-        grid-template-columns: 1fr; 
-        grid-row: 1fr 1fr;
-        background-color: blue;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .tilted-div h2{
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+    }
+    .tilted-div button{
+        font-size: 1.1rem;
+        width: 55vw;
+        height: 4rem;
+        border: 1px solid yellow  !important;
+        
+    }
+    .social-media{
+        position: static !important;
+        flex-direction: row !important;
+        width: 52vw;
+        border: none !important;
+        padding-left: 5px !important;
+    }
+    .social-media a{
+        margin-right: 1rem;
+    }
+
+
+    .about-main{
+        margin: 0 10px;
+    }
+    .about-me p{
+        font-size: 1rem !important;
+    }
+
+    .tech-stack ul li{
+        font-size: 2rem ;
+    }
+    .tech-stack-line{
+        margin-right: 10px;
+    }
+    .learning-journey-description{
+        letter-spacing: normal;
+        font-size: 1rem;
+    }
+
+    .certificate-item-div{
+        font-size: 1rem;
+    }
+    .certificates ul li div p span{
+        font-size: 0.5rem;
+    }
+
+    .approach-heading{
+        font-size: 0.6rem;
+        margin-bottom: 10vh;
+    }
+    .approach-dialogue{
+        line-height: 10vh;
+        font-size: 9vw;
+    }
+
+    .sec3{
+        height: 150vh;
+    }
+
+    .sec4{
+        margin: 0 10px;
+    }
+    .lets-talk{
+        font-size: 4rem;
+    }
+    #footer-mail{
+        font-size: 0.7rem !important;
     }
 }
 
