@@ -27,7 +27,7 @@ body::before {
     width: 100%;
     height: 100%;
     background: url("../../public/images/noise.jpg") repeat;
-    opacity: 0.08; /* Adjust opacity for desired effect */
+    opacity: 0.1; /* Adjust opacity for desired effect */
     pointer-events: none; /* Ensure overlay doesn’t interfere with interactions */
     z-index: -10;
     background-size: cover;
@@ -190,7 +190,8 @@ main{
 .sec3{
     margin-top: 150px;
     padding-top: 20px;
-    height: 3000px;
+    height: fit-content;
+    padding-bottom: 10rem;
 }
 .project-main{
     position: relative;
