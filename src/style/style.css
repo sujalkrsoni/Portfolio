@@ -353,7 +353,7 @@ footer div {
         padding: 0 !important;
     }
     .home-left h2 {
-        font-size: 17px;
+        font-size: 17px !important;
         letter-spacing: 1px;
     }
     .home-left button {
