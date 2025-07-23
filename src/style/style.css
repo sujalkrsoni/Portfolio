@@ -407,6 +407,7 @@ footer div {
     }
     .projects img {
         width: 90vw; 
+        opacity: 1;
     }
     .sec4 {
         margin: 0 20px;
@@ -417,6 +418,12 @@ footer div {
     #footer-mail {
         font-size: 0.8rem !important; 
         padding: 8px 12px !important;
+    }
+    .project-heading, .about-me-heading,.approach-heading,.tech-stack-heading, .certificates-heading, .learning-journey-heading{
+        font-size: 10px !important;
+        color: yellow !important;
+        font-weight: normal !important;
+        letter-spacing: 1.5px;
     }
 }
 
