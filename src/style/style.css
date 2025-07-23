@@ -198,19 +198,17 @@ main{
 }
 
 .project-container{
-    margin-top: 80px;  
-    position: absolute; 
-    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.projects{
-    transform: rotate(-8deg) translate(12%);
-}
+
 .projects img{
     opacity: 0.2;
     scale: 0.95;
     width: 60vw;
     height: 38vw;
-    border-radius: 30px;
 }
 
 /* -------------------- sec 4 ---------------  */
