@@ -1,13 +1,15 @@
+/* Base styles (your current desktop-first styles) */
 @font-face {
     font-family: sujal;
     src: url(./font/NeueMachina-Regular.otf);
 }
-*{
+* {
     font-family: sujal;
     margin: 0;
     padding: 0;
     color: white;
     scroll-behavior: smooth;
+    box-sizing: border-box; 
 }
 body, html {
     margin: 0;
@@ -19,320 +21,412 @@ body, html {
 
 body {
     cursor: none;
-    background: black; 
-}  
+    background: black;
+}
 body::before {
     content: "";
-    position: absolute;
+    position: fixed; /* Use fixed for background overlay so it stays */
     width: 100%;
     height: 100%;
     background: url("../../public/images/noise.jpg") repeat;
-    opacity: 0.1; /* Adjust opacity for desired effect */
-    pointer-events: none; /* Ensure overlay doesn’t interfere with interactions */
+    opacity: 0.1;
+    pointer-events: none;
     z-index: -10;
     background-size: cover;
-    /* filter: brightness(50%); */
-} 
-.overlay{
+}
+.overlay {
     background-color: rgba(0, 0, 0, 0.415);
     padding: 0;
 }
-a{
+a {
     cursor: none;
     text-decoration: none;
     color: white;
 }
-  
-.cursor{
-    width: 35px;
-    height: 35px;
-    border: 2px solid rgb(255, 255, 255);
-    position: absolute;
-    border-radius: 50%;
-    z-index: 5;
-    opacity: 0;
-    pointer-events: all;
-}
-#cursor2{
-    width: 35px;
-    height: 35px;
-    border: 2px solid rgb(255, 255, 255);
-    position: absolute;
-    border-radius: 50%;
-    z-index: 5;
-    opacity: 0;
-}
 
+/* Custom Cursor Styles (keep as is, handled by JS and touch media query) */
+.cursor {
+    width: 35px;
+    height: 35px;
+    border: 2px solid rgb(255, 255, 255);
+    position: fixed; /* fixed for consistent behavior */
+    border-radius: 50%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none; /* Changed to none as JS handles interaction */
+}
+#cursor2 {
+    width: 35px;
+    height: 35px;
+    border: 2px solid rgb(255, 255, 255);
+    position: fixed; 
+    border-radius: 50%;
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none; 
+}
 .cursor, .tilted-div {
     will-change: transform;
 }
-  
-html > *:not(:hover) .cursor{
-    display:none; /* DOnt show cursor when cursor is out of web page */
+html > *:not(:hover) .cursor {
+    display: none;
 }
-
-
 
 /* ----------- Header -------------- */
-.nav-link{
+
+.nav-link {
     color: white;
 }
-.nav-link:hover{
+.nav-link:hover {
     color: yellow;
 }
+/* Ensure the collapsed navbar has a background for readability */
+@media (max-width: 991.98px) { 
+    .navbar-collapse {
+        background-color: #343a40; 
+        padding-bottom: 1rem; 
+    }
+}
+
 
 /* ----------------------- sec 1 ------------------ */
-main{
+main {
     padding-top: 100px;
     height: 90vh;
 }
-.container {
-    perspective: 1500px; /* Controls the intensity of the 3D effect */
-    position: relative;
-}
-.sec1{
+.sec1 {
     padding-left: 100px;
 }
 .tilted-div {
     width: fit-content;
 }
-.home-left h2{
+.home-left h2 {
     font-size: 70px;
     font-weight: bolder;
     letter-spacing: 5px;
 }
-.home-left button{
+.home-left button {
     width: 300px;
     height: 80px;
     font-size: 25px;
 }
-.social-media{
+.social-media {
     top: 250px;
     right: 30px;
 }
-.social-media a i{
+.social-media a i {
     color: white;
     font-size: 30px;
 }
 
 
-
 /* ------------------ sec 2 ---------------- */
-.about-main{
+.about-main {
     margin: 0 170px 0 170px;
 }
-.about-me,.tech-stack,.learning-journey,.certificates,.approach{
+.about-me, .tech-stack, .learning-journey, .certificates, .approach {
     padding-top: 170px;
 }
-.tech-stack , .learning-journey{
+.tech-stack, .learning-journey {
     padding-bottom: 50px;
 }
-.tech-stack ul li{
+.tech-stack ul li {
     font-size: 80px;
     padding: 5px 2px;
     width: 100%;
 }
-.tech-stack-line{
+.tech-stack-line {
     width: 100%;
     margin: 5px 0;
     border: 1px solid rgba(255, 255, 255, 0.207);
 }
-.learning-journey-description{
+.learning-journey-description {
     letter-spacing: 1px;
 }
 
-/*  For all item (li) */
-.certificate-item-div{
+.certificate-item-div {
     font-size: 55px;
     overflow: hidden;
 }
-/* For right side  */
-.certificates ul li div p span{
+.certificates ul li div p span {
     border: 1px solid rgba(255, 255, 255, 0.207);
     border-radius: 35px;
     padding: 7px 10px;
     letter-spacing: 1.3px;
     font-size: 14px;
 }
-/* for right side item as well as only for 3,4 item */
-.certificates ul li:nth-child(3) div p,.certificates ul li:nth-child(4) div p{
+.certificates ul li:nth-child(3) div p, .certificates ul li:nth-child(4) div p {
     margin-top: 20px;
 }
-/* for border-bottom  */
-.certificates-line{
+.certificates-line {
     border-top: 1px solid rgba(255, 255, 255, 0.207);
 }
-
-.certificate-item{
+.certificate-item {
     position: relative;
     padding: 25px 0;
 }
-.certificates img{
+.certificates img {
     position: absolute;
     width: 400px;
     display: none;
     height: 250px;
     z-index: 3;
 }
-.approach{
+.approach {
     height: 100vh;
 }
-.approach-dialogue{
-    font-size: 6.04vw;
+.approach-dialogue {
+    font-size: 6.04vw; /* This is already fluid, good! */
     line-height: 100px;
     font-weight: bolder;
 }
 
-
-
 /* --------------------- sec 3 -------------------- */
-
-.sec3{
+.sec3 {
     margin-top: 150px;
     padding-top: 20px;
     height: fit-content;
     padding-bottom: 15rem;
 }
-.project-main{
+.project-main {
     position: relative;
-    
 }
-
-.project-container{
+.project-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.projects img{
+.projects img {
     opacity: 0.2;
     scale: 0.95;
     width: 60vw;
-    height: 38vw;
+    height: 38vw; 
 }
 
 /* -------------------- sec 4 ---------------  */
-.sec4{
+.sec4 {
     margin: 0 190px;
 }
-.lets-talk{
+.lets-talk {
     font-size: 100px;
     font-weight: bold;
 }
-footer div{
+footer div {
     border-top: 1px solid rgba(255, 255, 255, 0.207);
     padding-top: 50px;
     margin-top: 80px;
     padding-bottom: 100px;
-
 }
 
+/* --- Media Queries for Smaller Screens (Adjusting Sizes Only) --- */
 
-
-
-
-
-
-
-
-
-/* For Responsive */
-@media( max-width: 426px){
-    .cursor{
-        display: none !important;
+/* For devices up to 1024px (e.g., larger tablets in portrait) */
+@media (max-width: 1024px) {
+    .sec1 {
+        padding-left: 50px; 
     }
-    .navbar-brand{
-        padding: 0 !important;
-        margin: 0 !important;
-        width: 4rem !important;
-        height: 6rem !important;
+    .home-left h2 {
+        font-size: 50px;
     }
-    #menu{
-        color: white !important;
+    .home-left button {
+        width: 250px;
+        height: 70px;
+        font-size: 20px;
     }
-    .sec1,.home-left,.tilted-div{
-        margin: 0 !important;
-        padding: 0 !important;
+    .about-main {
+        margin: 0 100px; 
     }
-    .sec1{
-        font-size: 1rem;
-        padding: 0;
+    .tech-stack ul li {
+        font-size: 60px; 
     }
-    main{
-        display: flex;
-        flex-direction: column;
+    .certificate-item-div {
+        font-size: 40px; 
+    }
+    .certificates img {
+        width: 300px; 
         height: auto;
     }
-    .tilted-div h2{
-        font-size: 1.4rem;
-        letter-spacing: 2px;
+    .lets-talk {
+        font-size: 70px; 
     }
-    .tilted-div button{
-        font-size: 1.1rem;
-        width: 55vw;
-        height: 4rem;
-        border: 1px solid yellow  !important;
-        
-    }
-    .social-media{
-        position: static !important;
-        flex-direction: row !important;
-        width: 52vw;
-        border: none !important;
-        padding-left: 5px !important;
-    }
-    .social-media a{
-        margin-right: 1rem;
-    }
-
-
-    .about-main{
-        margin: 0 10px;
-    }
-    .about-me p{
-        font-size: 1rem !important;
-    }
-
-    .tech-stack ul li{
-        font-size: 2rem ;
-    }
-    .tech-stack-line{
-        margin-right: 10px;
-    }
-    .learning-journey-description{
-        letter-spacing: normal;
-        font-size: 1rem;
-    }
-
-    .certificate-item-div{
-        font-size: 1rem;
-    }
-    .certificates ul li div p span{
-        font-size: 0.5rem;
-    }
-
-    .approach-heading{
-        font-size: 0.6rem;
-        margin-bottom: 10vh;
-    }
-    .approach-dialogue{
-        line-height: 10vh;
-        font-size: 9vw;
-    }
-
-    .sec3{
-        height: 150vh;
-    }
-
-    .sec4{
-        margin: 0 10px;
-    }
-    .lets-talk{
-        font-size: 4rem;
-    }
-    #footer-mail{
-        font-size: 0.7rem !important;
+    .sec4 {
+        margin: 0 100px;
     }
 }
 
+/* For devices up to 768px (e.g., most tablets in portrait) */
+@media (max-width: 768px) {
+    .navbar-brand {
+        margin-left: 20px !important; 
+        width: 100px; 
+        height: auto;
+    }
+    .sec1 {
+        padding-left: 30px; 
+    }
+    main {
+        height: auto; 
+        padding-top: 80px; 
+    }
+    .home-left h2 {
+        font-size: 40px; 
+        letter-spacing: 3px;
+    }
+    .home-left button {
+        width: 220px;
+        height: 60px;
+        font-size: 18px;
+    }
+    .social-media {
+        top: 150px;
+        right: 15px;
+    }
+    .social-media a i {
+        font-size: 25px;
+    }
+
+    .about-main {
+        margin: 0 50px;
+    }
+    .about-me-heading, .tech-stack-heading, .learning-journey-heading, .certificates-heading, .approach-heading {
+        font-size: 35px;
+    }
+    .about-me-description, .learning-journey-description {
+        font-size: 18px !important;
+    }
+    .tech-stack ul li {
+        font-size: 45px;
+    }
+    .certificate-item-div {
+        font-size: 30px;
+    }
+    .certificates ul li div p span {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+    .certificates img {
+        width: 250px;
+    }
+    .approach-dialogue {
+        font-size: 8vw;
+        line-height: 80px;
+    }
+    .sec3 {
+        padding-bottom: 8rem;
+    }
+    .projects img {
+        width: 75vw;
+        height: auto;
+    }
+    .sec4 {
+        margin: 0 50px;
+    }
+    .lets-talk {
+        font-size: 50px;
+    }
+    #footer-mail {
+        font-size: 1rem !important;
+        padding: 10px 15px !important;
+    }
+    footer div {
+        padding-top: 30px;
+        margin-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+/* For devices up to 480px (e.g., older phones in portrait) */
+@media (max-width: 480px) {
+    .navbar-brand {
+        margin-left: 10px !important;
+        width: 80px;
+    }
+    .sec1 {
+        padding-left: 0px !important; 
+    }
+    .home-left{
+        margin-left: 0 !important;
+        padding-left: 0 I !important;
+    }
+    .tilted-div{
+        padding: 0 !important;
+    }
+    .home-left h2 {
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+    .home-left button {
+        width: 150px;
+        height: 40px;
+        font-size: 13px;
+    }
+    .social-media {
+        top: 100px;
+        right: 10px;
+    }
+    .social-media a i {
+        font-size: 20px;
+    }
+
+    .about-main {
+        margin: 0 20px;
+    }
+    .about-me{
+        padding-top: 100px !important;
+    }
+    .about-me-heading, .tech-stack-heading, .learning-journey-heading, .certificates-heading, .approach-heading {
+        font-size: 28px;
+    }
+    .about-me-description, .learning-journey-description {
+        font-size: 16px !important;
+    }
+    .tech-stack ul li {
+        font-size: 30px;
+    }
+    .certificate-item-div {
+        font-size: 20px;
+    }
+    .certificates ul li div p span {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+    .learning-journey,.certificates{
+        padding-top: 100px !important;
+    }
+    .certificates img {
+       display: none !important; 
+    }
+
+    .approach-dialogue {
+        font-size: 10vw; 
+        line-height: 60px;
+    }
+    .sec3 {
+        padding-bottom: 5rem; 
+    }
+    .projects img {
+        width: 90vw; 
+    }
+    .sec4 {
+        margin: 0 20px;
+    }
+    .lets-talk {
+        font-size: 35px; 
+    }
+    #footer-mail {
+        font-size: 0.8rem !important; 
+        padding: 8px 12px !important;
+    }
+}
+
+
+/* Hide custom cursor on touch devices (small screens) */
+@media (hover: none) and (pointer: coarse) {
+    .cursor, #cursor2 {
+        display: none !important;
+    }
+    body {
+        cursor: auto; /* Restore default cursor */
+    }
+}
