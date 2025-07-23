@@ -375,9 +375,6 @@ footer div {
     .about-me{
         padding-top: 100px !important;
     }
-    .about-me-heading, .tech-stack-heading, .learning-journey-heading, .certificates-heading, .approach-heading {
-        font-size: 28px;
-    }
     .about-me-description, .learning-journey-description {
         font-size: 16px !important;
     }
@@ -393,6 +390,13 @@ footer div {
     }
     .learning-journey,.certificates{
         padding-top: 100px !important;
+    }
+    .approach{
+        padding-top: 0px;
+        height: 60vh !important;
+    }
+    .sec3{
+        margin-top: 0px !important;
     }
     .certificates img {
        display: none !important; 
